@@ -20,10 +20,10 @@ jobs:
               working-directory: src/store-front
 
             - name: Zip build output
-              run: zip -r build.zip build/
+              run: zip -r dist.zip dist/
 
             - name: Upload artifact
               uses: actions/upload-artifact@v4
               with:
                 name: build-artifact
-                path: build.zip
+                path: dist.zip
